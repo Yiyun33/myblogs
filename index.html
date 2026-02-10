@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog Space</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <h1>My Blog Space</h1>
+        <a href="#posts" class="btn">Read Posts</a>
+      </nav>
+      <section class="hero-content">
+        <p class="tag">Personal Website</p>
+        <h2>Stories, tutorials, and notes from my journey.</h2>
+        <p>
+          Welcome to my corner of the internet where I share what I learn about
+          technology, productivity, and creative work.
+        </p>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="about">
+        <h3>About Me</h3>
+        <p>
+          I'm a curious builder who enjoys writing practical guides and honest
+          reflections. This blog is where I document lessons learned and useful
+          resources for others.
+        </p>
+      </section>
+
+      <section class="section" id="posts">
+        <div class="section-title-row">
+          <h3>Latest Posts</h3>
+          <label>
+            Filter:
+            <select id="categoryFilter" aria-label="Filter posts by category">
+              <option value="all">All</option>
+              <option value="Tech">Tech</option>
+              <option value="Writing">Writing</option>
+              <option value="Productivity">Productivity</option>
+            </select>
+          </label>
+        </div>
+        <div id="postGrid" class="post-grid"></div>
+      </section>
+
+      <section class="section" id="newsletter">
+        <h3>Stay Updated</h3>
+        <p>Get new posts directly in your inbox.</p>
+        <form id="subscribeForm" class="subscribe-form">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> My Blog Space · Built with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
